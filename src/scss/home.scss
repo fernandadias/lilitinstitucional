@@ -1,0 +1,43 @@
+#video-banner{
+	background: #000;
+	height: 70vh;
+	width: 100%;
+}
+
+#intro{
+	p{
+		color: $color_white;
+		text-align: center;
+	}
+}
+
+#manifesto{
+	p{
+		color: $color_purple;
+		font-family: $text-strong;
+		text-transform: uppercase;
+		font-size: 20px;
+		letter-spacing: 2px;
+
+		strong{
+			text-decoration: underline;
+		}
+
+		&.final{
+			font-size: 30px;
+			margin-top: $padding;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+#content-home{
+	h1, p{
+		color: $color_white;
+	}
+
+	h1{
+		font-family: $text-strong;
+		font-size: 25px;
+	}
+}

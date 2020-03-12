@@ -1,4 +1,8 @@
-$color: red;
-body {
-  background-color : $color;
-}
+@charset 'UTF-8';
+   
+@import 'vendor';
+@import 'colors';
+@import 'global';
+@import 'sections';
+
+@import 'home';
