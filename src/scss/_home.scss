@@ -1,0 +1,189 @@
+#video-banner{
+	background: #000;
+	height: 70vh;
+	width: 100%;
+	padding: 0!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+	video{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	}
+}
+
+#intro{
+	p{
+		max-width: $small-width;
+		color: $color_white;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+#manifesto{
+
+	.container{
+		max-width: $small-width;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	p{
+		color: $color_purple;
+		font-family: $text-strong;
+		text-transform: uppercase;
+		font-size: 20px;
+		letter-spacing: 2px;
+		line-height: 40px;
+
+		strong{
+			text-decoration: underline;
+		}
+
+		&.final{
+			font-size: 30px;
+			margin-top: $padding;
+			letter-spacing: 1px;
+		}
+	}
+
+	.text{
+		width: 70%;
+		display: inline-block;
+	}
+
+	.symbol{
+		width: 29%;
+		display: inline-block;
+
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+#content-home{
+	padding: 0;
+
+
+	h1, p{
+		color: $color_white;
+	}
+
+	h1{
+		font-family: $text-strong;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-size: 25px;
+		margin-bottom: $padding/2;
+	}
+
+	#content-1,
+	#content-2,
+	#content-3 {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		overflow: hidden;
+	}
+
+	.image{
+		width: 44%;
+		flex: 1;
+
+		&#content-img-1{
+			background: url('../images/content/lilit-content-bg-1.jpg') no-repeat;
+		}
+
+		&#content-img-2{
+			background: url('../images/content/lilit-content-bg-2.jpg') no-repeat;
+		}
+
+		&#content-img-3{
+			background: url('../images/content/lilit-content-bg-3.jpg') no-repeat;
+		}
+	}
+
+	.text{
+		width: 55%;
+		flex: 1;
+		padding: 15vh $padding;
+	}
+}
+
+#created-by{
+	h1{
+		color: $color_red;
+		text-align: center;
+		font-size: 32px;
+		font-family: $text-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+}
+
+
+#founder-letter{
+	background-color: $color_purple;
+	background-image: url('../images/content/lilit-tecido-carta.png');
+	background-repeat: no-repeat;
+
+	color: $color_white;
+
+	padding: $padding*3 $padding;
+
+	.wrapper{
+		max-width: $small-width;
+		margin: 0 auto;
+
+		p{
+			margin-bottom: $padding/1.5;
+		}
+	}
+}
+
+#reviews{
+
+	.wrapper{
+		max-width: $small-width;
+		margin: 0 auto;
+
+		h1{
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			color: $color_red;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+
+		.quote{
+			font-family: $text-strong;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: $color_pink;
+			text-align: center;
+			font-size: 26px;
+			margin: $padding 0 $padding/2;
+		}
+
+		.person{
+			font-family: $text-serif;
+			color: $color_pink;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 22px;
+			margin-bottom: $padding;
+		}
+	}
+	
+}
