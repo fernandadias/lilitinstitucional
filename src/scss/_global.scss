@@ -79,7 +79,7 @@ section{
 }
 
 #menu{
-  padding: $padding/2 $padding;
+  padding: $padding/4 $padding;
 
   nav{
 
@@ -127,3 +127,36 @@ button{
   font-size: 12px;
   margin: 0 auto;
 }
+
+footer.bg-purple{
+  background-color: $color_pink;
+  margin-top: -10px;
+
+  #footer-infos{
+    width: 50%;
+
+    .logo{
+      display: inline-block;
+    }
+
+     #menu-footer{
+      display: inline-block;
+
+      h1, li, a{
+        color: $color_white;
+      }
+
+      h1{
+        font-family: $text-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+
+      a{
+        font-size: 12px;
+      }
+    }
+
+  }
+}
+

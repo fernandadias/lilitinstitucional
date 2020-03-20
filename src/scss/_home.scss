@@ -70,9 +70,20 @@
 	}
 }
 
+#meio{
+	padding: 0;
+	white-space: nowrap;
+
+	div{
+		width: 50%;
+		display: inline-block;
+		border: 2px solid red;
+		height: 100px;
+	}
+}
+
 #content-home{
 	padding: 0;
-
 
 	h1, p{
 		color: $color_white;
@@ -96,26 +107,71 @@
 	}
 
 	.image{
-		width: 44%;
+		// width: 44%;
+		// flex: 1;
+		background-color: red;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		-moz-box-sizing: border-box; 
+	    -webkit-box-sizing: border-box; 
+		box-sizing: border-box; 
+
+		background-clip: content-box!important;
+
 		flex: 1;
 
 		&#content-img-1{
-			background: url('../images/content/lilit-content-bg-1.jpg') no-repeat;
+			background: url('../images/content/lilit-content-bg-1.jpg') no-repeat red;
 		}
 
 		&#content-img-2{
-			background: url('../images/content/lilit-content-bg-2.jpg') no-repeat;
+			background: url('../images/content/lilit-content-bg-2.jpg') no-repeat red;
 		}
 
 		&#content-img-3{
-			background: url('../images/content/lilit-content-bg-3.jpg') no-repeat;
+			background: url('../images/content/lilit-content-bg-3.jpg') no-repeat red;
 		}
 	}
 
 	.text{
-		width: 55%;
+		-moz-box-sizing: border-box; 
+    	-webkit-box-sizing: border-box; 
+		box-sizing: border-box; 
 		flex: 1;
-		padding: 15vh $padding;
+
+		background-clip: content-box!important;
+	}
+
+	#content-1,
+	#content-3 {
+		.text{
+			// margin-left: $padding;
+			padding: $padding*4 0;
+	}
+
+		.image{
+			padding-right: $padding*2;
+	   		//  width: 50%;
+		}
+	}
+
+	#content-2{
+		.text{
+			// margin-right: $padding;
+			padding: $padding*4 0;
+			text-align: right;
+		}
+
+		.image{
+			padding-left: $padding*2;
+	   		//  width: 50%;
+	   		 display: inline-block;
+	   		 -moz-box-sizing: border-box;
+	   		 background-clip: content-box;
+		}
 	}
 }
 
@@ -186,4 +242,14 @@
 		}
 	}
 	
+}
+
+#instafeed{
+	padding: 0;
+
+	a{
+		display: inline-block;
+		width: 25%;
+		height: auto;
+	}
 }

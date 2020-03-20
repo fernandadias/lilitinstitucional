@@ -19,6 +19,8 @@
 		<!-- responsive style sheet -->
 		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
+		<script type="text/javascript" src="js/vendor/instafeed.min.js"></script>
+
 
 		<!-- Fix Internet Explorer ______________________________________-->
 
@@ -72,7 +74,10 @@
 				</div>
 			</div>
 		</section>
-
+		<section id="meio">
+			<div></div>
+			<div></div>
+		</section>
 		<section id="content-home" class="bg-pink">
 			<div id="content-1">
 				<div class="image" id="content-img-1">
@@ -130,7 +135,38 @@
 				<button>Saiba mais</button>
 			</div>
 		</section>
-		<section id="instagram"></section>
+		<section id="instafeed"></section>
 	</body>
-	<footer class="bg-purple"></footer>
+	<footer class="bg-purple">
+		<section id="footer-infos">
+			<div class="logo">
+				<a href="#"><img src="images/logos/lilit-logo-menu.png"></a>
+			</div>
+			<div id="menu-footer">
+				<h1>Menu</h1>
+				<ul>
+					<li><a href="#">Quem somos</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Contato</a></li>
+					<li><a href="#">Termos de Uso</a></li>
+				</ul>
+			</div>
+		</section>
+	</footer>
+
+	<script type="text/javascript">
+	    var userFeed = new Instafeed({
+		  get: 'user',
+		  userId: '8987997106',
+		  clientId: '924f677fa3854436947ab4372ffa688d',
+		  accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
+		  resolution: 'standard_resolution',
+		  template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
+		  sortBy: 'most-recent',
+		  limit: 4,
+		  links: false
+		});
+		userFeed.run();
+	</script>
+
 </html>
