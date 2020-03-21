@@ -87,13 +87,15 @@ section{
 
 #menu{
   padding: $padding/3 $padding;
-  background-color: rgba(255,255,255,0);
+  background-color: $color_white;
   position: absolute;
   width: 100%;
   transition: all 500ms ease-in-out;
 
-  .logo-branco{ display: inline-block; }
-  .logo-vermelho{ display: none; }
+  .wrapper{
+    height: 36px;
+  }
+
 
   &.scroll{
     background-color: $color_white;
@@ -113,13 +115,15 @@ section{
       width: 30%;
       line-height: 33px; // tamanho vertical do logo
      // vertical-align: text-bottom;
+     line-height: 35px;
+     vertical-align: top;
      
       li{
         display: inline-block;
        
         a{
           font-family: $text-strong;
-          color: $color_white;
+          color: $color_purple;
           font-size: 16px;
           text-transform: uppercase;
           margin-right: $padding/2;
