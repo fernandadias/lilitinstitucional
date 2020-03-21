@@ -14,7 +14,37 @@
 		position: absolute;
 	    top: 0;
 	    left: 0;
-	    width: 100%;
+		width: 100%;
+		z-index: 1;
+		background-color: #000;
+		opacity: .6;
+	}
+
+	.text{
+		z-index: 2;
+		position: relative;
+		padding: 0 $padding;
+
+		h1{
+			font-size: 50px;
+			text-align: center;
+			width: 100%;
+			margin-top: 30vh;
+			font-family: $text-strong;
+			color: $color_white;
+			text-transform: uppercase;
+		}
+	
+		h2{
+			font-size: 12px;
+			text-align: center;
+			width: 100%;
+			font-family: $text-serif;
+			font-size: 22px;
+			color: $color_pink;
+			margin-top: 20px;
+			text-transform: uppercase;
+		}
 	}
 }
 
@@ -106,10 +136,10 @@
 		overflow: hidden;
 	}
 
-	.image{
+	.image{ 
 		// width: 44%;
 		// flex: 1;
-		background-color: red;
+		// background-color: red;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -120,35 +150,40 @@
 		box-sizing: border-box; 
 
 		background-clip: content-box!important;
+		max-width: 800px;
 
 		flex: 1;
 
 		&#content-img-1{
-			background: url('../images/content/lilit-content-bg-1.jpg') no-repeat red;
+			background: url('../images/content/lilit-content-bg-1.jpg') no-repeat;
 		}
 
 		&#content-img-2{
-			background: url('../images/content/lilit-content-bg-2.jpg') no-repeat red;
+			background: url('../images/content/lilit-content-bg-2.jpg') no-repeat;
 		}
 
 		&#content-img-3{
-			background: url('../images/content/lilit-content-bg-3.jpg') no-repeat red;
+			background: url('../images/content/lilit-content-bg-3.jpg') no-repeat;
 		}
 	}
 
-	.text{
+	.text{ 
 		-moz-box-sizing: border-box; 
     	-webkit-box-sizing: border-box; 
 		box-sizing: border-box; 
 		flex: 1;
 
 		background-clip: content-box!important;
+
+		h1, p{
+			max-width: 80%;
+		}
 	}
 
 	#content-1,
 	#content-3 {
 		.text{
-			// margin-left: $padding;
+			margin-left: $padding; 
 			padding: $padding*4 0;
 	}
 
@@ -160,9 +195,13 @@
 
 	#content-2{
 		.text{
-			// margin-right: $padding;
+			margin-right: $padding;
 			padding: $padding*4 0;
 			text-align: right;
+
+			h1, p{
+				float: right;
+			}
 		}
 
 		.image{

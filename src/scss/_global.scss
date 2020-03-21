@@ -54,7 +54,6 @@ $small-width: 900px;
 .no-border {border: none !important;}
 
 
-
 section{
   position: relative;
   padding: $padding;
@@ -66,7 +65,7 @@ section{
 }
 
 #upper{
-  padding: $padding/3 $padding;
+  padding: $padding/3 $padding; 
 
   h1{
     font-family: $text-strong;
@@ -78,23 +77,49 @@ section{
   }
 }
 
+.animateIn{
+  transform: translateY(0px);
+}
+
+.animateOut{
+  transform: translateY(-100%);
+}
+
 #menu{
-  padding: $padding/4 $padding;
+  padding: $padding/3 $padding;
+  background-color: rgba(255,255,255,0);
+  position: absolute;
+  width: 100%;
+  transition: all 500ms ease-in-out;
+
+  .logo-branco{ display: inline-block; }
+  .logo-vermelho{ display: none; }
+
+  &.scroll{
+    background-color: $color_white;
+
+    .logo-branco{ display: none; }
+    .logo-vermelho{ display: inline-block; }
+
+    ul li a{
+      color: $color_purple;
+    }
+  }
 
   nav{
 
     ul{
       display: inline-block;
       width: 30%;
-      line-height: 44px; // tamanho vertical do logo
-      vertical-align: text-bottom;
+      line-height: 33px; // tamanho vertical do logo
+     // vertical-align: text-bottom;
      
       li{
         display: inline-block;
        
         a{
           font-family: $text-strong;
-          color: $color_purple;
+          color: $color_white;
           font-size: 16px;
           text-transform: uppercase;
           margin-right: $padding/2;
