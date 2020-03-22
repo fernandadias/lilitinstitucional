@@ -365,6 +365,11 @@
 
 #reviews{
 
+	.review-title{
+		display: table;
+		margin: 0 auto;
+	}
+
 	.wrapper{
 		max-width: $small-width;
 		margin: 0 auto;
@@ -377,6 +382,7 @@
 			text-align: center;
 			text-transform: uppercase;
 			font-size: 16px;
+			display: inline-block;
 		}
 
 		.quote{

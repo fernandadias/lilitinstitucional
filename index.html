@@ -14,8 +14,12 @@
 		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/lilit-icon.png">
 		<link rel="icon" sizes="48x48" href="images/fav-icon/lilit-icon.ico">
 
-		<!-- Required Core Stylesheet -->
+		<!-- Slider de review - NPM -->
 		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+		<!-- Select -->
+		<link rel="stylesheet" type="text/css" href="css/vendor/select/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="css/vendor/select/cs-skin-underline.css" />
 
 		<!-- Main style sheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -170,8 +174,16 @@
 		</section>
 		<section id="reviews" class="bg-white">
 			<div class="wrapper">
-				<h1>O QUE A COMUNIDADE ESTÁ DIZENDO</h1>
-				
+				<div class="review-title">
+					<h1>O QUE A</h1>
+					<h1>
+						<select class="cs-select cs-skin-underline">
+							<option value="comunidade" selected>Comunidade</option>
+							<option value="imprensa">Imprensa</option>
+						</select>
+					</h1>
+					<h1>ESTÁ DIZENDO</h1>
+				</div>
 
 				<div class="glide">
 					<div class="glide__track" data-glide-el="track">
@@ -233,16 +245,24 @@
 		userFeed.run();
 	</script>
 
-<script type="text/javascript" src="js/menu-sticky.js"></script>
-<script type="text/javascript" src="js/animacoes.js"></script>
+	<script type="text/javascript" src="js/menu-sticky.js"></script>
+	<script type="text/javascript" src="js/animacoes.js"></script>
 
 
-<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+	<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
-<script>
-  new Glide('.glide').mount()
-</script>
+	<script>
+	new Glide('.glide').mount()
+	</script>
 
-
+	<script src="js/vendor/select/classie.js"></script>
+	<script src="js/vendor/select/selectFx.js"></script>
+	<script>
+		(function() {
+			[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+				new SelectFx(el);
+			} );
+		})();
+	</script>
 
 </html>
