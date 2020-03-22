@@ -1,13 +1,13 @@
 /*______________________ Global stlye ___________________*/
 
- @font-face {
-  font-family: 'font-awesome';
-  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.ttf');
-  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.eot'), /* IE9 Compat Modes */
-       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/font-awesome/fonts/fontawesome-webfont.svg') format('svg'); /* Legacy iOS */
- }
+// @font-face {
+//  font-family: 'font-awesome';
+//  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.ttf');
+//  src: url('../fonts/font-awesome/fonts/fontawesome-webfont.eot'), /* IE9 Compat Modes */
+//       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//       url('../fonts/font-awesome/fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+ //      url('../fonts/font-awesome/fonts/fontawesome-webfont.svg') format('svg'); /* Legacy iOS */
+// }
 
  @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;700&family=Oswald:wght@600&display=swap');
 
@@ -190,3 +190,47 @@ footer.bg-purple{
   }
 }
 
+
+.glide__bullets{
+
+  width: $padding*2;
+  margin: 0 auto;
+  display: flex;
+
+  .glide__bullet{
+
+    display: inline-block;
+    background: unset;
+    padding: 10px;
+
+    span{
+      background-color: $color_white;
+      padding: 6px;
+      border: 2px solid $color_pink;
+      display: inline-block;
+      border-radius: 15px;
+      transition: all 100ms ease-in-out;
+
+    }
+
+    &:hover span{
+      border: 2px solid $color_red;
+    }
+  
+    &--active{
+
+      span{
+        background-color: $color_pink;
+      }
+
+      &:hover span{
+        background-color: $color_red;
+      }
+     
+    }
+  }
+}
+
+.glide{
+  padding-bottom: $padding;
+}

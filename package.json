@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "gulp-cli": "^2.2.0"
   },
   "devDependencies": {
