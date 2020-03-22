@@ -103,6 +103,16 @@ section{
   width: 100%;
   transition: all 500ms ease-in-out;
 
+  &.cloned{
+    -webkit-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
+box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
+  }
+
+  &.fixed{
+    position: fixed;
+  }
+
   .wrapper{
     height: 36px;
   }

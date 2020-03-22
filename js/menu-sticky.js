@@ -1,28 +1,27 @@
-(() => {
-  'use strict';
+// Create a clone of the menu, right next to original.
+$('.menu').addClass('original').clone().insertAfter('.menu').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-  let refOffset = 0;
-  const bannerHeight = 20;
-  const bannerWrapper = document.querySelector('#menu');
+scrollIntervalID = setInterval(stickIt, 10);
 
-  const newMenu = 120;
 
-  const handler = () => {
-    const newOffset = window.scrollY || window.pageYOffset;
+function stickIt() {
 
-    if (newOffset > bannerHeight) {
-      if (newOffset > refOffset) {
-        bannerWrapper.classList.remove('animateIn');
-        bannerWrapper.classList.add('animateOut');
-      } else {
-        bannerWrapper.classList.remove('animateOut');
-        bannerWrapper.classList.add('animateIn');
-      }
-      refOffset = newOffset;
-    } else {
-        console.log('aasd');
-    }
-  };
+  var orgElementPos = $('.original').offset();
+  orgElementTop = orgElementPos.top;               
 
-  window.addEventListener('scroll', handler, false);
-})();
+  if ($(window).scrollTop() >= (orgElementTop)) {
+    // scrolled past the original position; now only show the cloned, sticky element.
+
+    // Cloned element should always have same left position and width as original element.     
+    orgElement = $('.original');
+    coordsOrgElement = orgElement.offset();
+    leftOrgElement = coordsOrgElement.left;  
+    widthOrgElement = orgElement.css('width');
+    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
+    $('.original').css('visibility','hidden');
+  } else {
+    // not scrolled past the menu; only show the original menu.
+    $('.cloned').hide();
+    $('.original').css('visibility','visible');
+  }
+}
