@@ -347,6 +347,8 @@
 #founder-letter{
 	background-color: $color_purple;
 	background-image: url('../images/content/lilit-tecido-carta.png');
+	background-attachment: fixed;
+	background-position: left;
 	background-repeat: no-repeat;
 
 	color: $color_white;
@@ -373,18 +375,22 @@
 	select{
 		text-transform: unset;
 		margin: 0 10px;
-		letter-spacing: 3px;
+		letter-spacing: 4px;
 		background: none;
 		border-top: none;
 		border-left: none;
 		border-right: none;
 		border-bottom: 2px solid $color_red;
 		outline-color: transparent;
-		  outline-style: none;
+		outline-style: none;
 		  
 		&:focus {
 			outline-color: transparent;
 			outline-style: none;
+		}
+
+		&:hover{
+			cursor: pointer;
 		}
 	}
 

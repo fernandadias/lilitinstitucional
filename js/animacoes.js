@@ -17,6 +17,7 @@ function onScroll(){
     var rect = textContainer.getBoundingClientRect();
     var scrollPercent = rect.y / window.innerHeight;
     updateTextPathOffset( scrollPercent * pathLength );
+  //  console.log(scrollPercent)
   });
 }
 

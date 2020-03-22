@@ -14,6 +14,9 @@
 		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/lilit-icon.png">
 		<link rel="icon" sizes="48x48" href="images/fav-icon/lilit-icon.ico">
 
+		<!-- FA -->
+		<script src="https://kit.fontawesome.com/a05a362183.js" crossorigin="anonymous"></script>
+
 		<!-- Slider de review - NPM -->
 		<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
@@ -241,6 +244,10 @@
 		<section id="footer-infos">
 			<div class="logo">
 				<a href="#"><img src="images/logos/lilit-logo-menu.png"></a>
+				<div class="social">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fas fa-envelope"></i></a>
+				</div>
 			</div>
 			<div id="menu-footer">
 				<h1>Menu</h1>
@@ -251,6 +258,21 @@
 					<li><a href="#">Termos de Uso</a></li>
 				</ul>
 			</div>
+			<div class="cta">
+				<h1>Vamos juntas?</h1>
+			</div>
+			<div class="form">
+				<p>Receba as novidades mais recentes sobre os lançamentos de produtos, promoções e o melhor do nosso Guia.</p>
+				<form action="/action_page.php">
+					<input type="text" id="email" name="email" placeholder="DEIXE SEU EMAIL" value=""><br>
+					<button type="submit" value="">
+						<i class="fas fa-chevron-right"></i>
+					</button>
+				  </form> 
+				<p>Queremos saber de você.<br/>
+				Manda notícias: <a href="mailto:oi@somoslilit.com.br?Subject=Oi%20Lilit" target="_top">oi@somoslilit.com.br</p>
+			</div>
+			
 		</section>
 	</footer>
 
@@ -279,8 +301,6 @@
 	new Glide('.glide#comunidade').mount();
 	new Glide('.glide#imprensa').mount()
 	</script>
-
-	
 
 	<script type="text/javascript" src="js/review-home.js"></script>
 
