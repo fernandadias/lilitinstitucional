@@ -285,6 +285,8 @@
 		}
 		classie.add( opt, 'cs-selected' );
 
+		console.log(this.el.value);
+
 		// if there´s a link defined
 		if( opt.getAttribute( 'data-link' ) ) {
 			// open in new tab?

@@ -177,7 +177,7 @@
 				<div class="review-title">
 					<h1>O QUE A</h1>
 					<h1>
-						<select class="cs-select cs-skin-underline">
+						<select class="cs-select cs-skin-underline" id="review-select">
 							<option value="comunidade" selected>Comunidade</option>
 							<option value="imprensa">Imprensa</option>
 						</select>
@@ -185,7 +185,7 @@
 					<h1>ESTÁ DIZENDO</h1>
 				</div>
 
-				<div class="glide">
+				<div class="glide" id="comunidade">
 					<div class="glide__track" data-glide-el="track">
 					  <ul class="glide__slides">
 						<li class="glide__slide">
@@ -199,6 +199,30 @@
 						<li class="glide__slide">
 							<p class="quote">"LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA." </p>
 							<p class="person"><strong>Lorem ipsum</strong> | dolor sir amet</p>
+						</li>
+					  </ul>
+					</div>
+					<div class="glide__bullets" data-glide-el="controls[nav]">
+						<button class="glide__bullet" data-glide-dir="=0"><span></span></button>
+						<button class="glide__bullet" data-glide-dir="=1"><span></span></button>
+						<button class="glide__bullet" data-glide-dir="=2"><span></span></button>
+					  </div>
+				  </div>
+
+				  <div class="glide" id="imprensa">
+					<div class="glide__track" data-glide-el="track">
+					  <ul class="glide__slides">
+						<li class="glide__slide">
+							<p class="quote">"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In nisl erat, feugiat nec malesuada in, pretium et erat." </p>
+							<p class="person"><img src="images/review/logos/buzzfeed.png" alt=""></p>
+						</li>
+						<li class="glide__slide">
+							<p class="quote">"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In nisl erat, feugiat nec malesuada in, pretium et erat." </p>
+							<p class="person"><img src="images/review/logos/buzzfeed.png" alt=""></p>
+						</li>
+						<li class="glide__slide">
+							<p class="quote">"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In nisl erat, feugiat nec malesuada in, pretium et erat." </p>
+							<p class="person"><img src="images/review/logos/buzzfeed.png" alt=""></p>
 						</li>
 					  </ul>
 					</div>
@@ -252,17 +276,12 @@
 	<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
 	<script>
-	new Glide('.glide').mount()
+	new Glide('.glide#comunidade').mount();
+	new Glide('.glide#imprensa').mount()
 	</script>
 
-	<script src="js/vendor/select/classie.js"></script>
-	<script src="js/vendor/select/selectFx.js"></script>
-	<script>
-		(function() {
-			[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-				new SelectFx(el);
-			} );
-		})();
-	</script>
+	
+
+	<script type="text/javascript" src="js/review-home.js"></script>
 
 </html>

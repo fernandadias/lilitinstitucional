@@ -370,6 +370,24 @@
 		margin: 0 auto;
 	}
 
+	select{
+		text-transform: unset;
+		margin: 0 10px;
+		letter-spacing: 3px;
+		background: none;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid $color_red;
+		outline-color: transparent;
+		  outline-style: none;
+		  
+		&:focus {
+			outline-color: transparent;
+			outline-style: none;
+		}
+	}
+
 	.wrapper{
 		max-width: $small-width;
 		margin: 0 auto;
@@ -402,6 +420,10 @@
 			text-transform: uppercase;
 			font-size: 22px;
 			margin-bottom: $padding/4;
+
+			img{
+				display: inline-block;
+			}
 		}
 	}
 	
