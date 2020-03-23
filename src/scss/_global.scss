@@ -98,15 +98,18 @@ section{
 
 #menu{
   padding: $padding/3 $padding;
-  background-color: $color_white;
+  background-color: rgba(244, 242, 237, 0); 
   position: absolute;
   width: 100%;
   transition: all 500ms ease-in-out;
 
+
+
   &.cloned{
+    background-color: rgba(244, 242, 237, 1);
     -webkit-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
--moz-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
+    box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
   }
 
   &.fixed{
@@ -120,7 +123,7 @@ box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
     ul li a{
       color: $color_purple;
       transition: all 100ms ease-in-out;
-      border-bottom: 2px solid $color_white;
+      // border-bottom: 2px solid $color_white;
       height: 30px;
 
       &:hover, &#active{
@@ -161,6 +164,10 @@ box-shadow: 0px 10px 44px -18px rgba(0,0,0,0.21);
         margin: 0 auto;
         display: block;
         width: 100px;
+
+        img{
+          max-width: 63px;
+        }
       }
     }
   }
@@ -375,6 +382,42 @@ footer.bg-purple{
         background-color: $color_red;
       }
      
+    }
+  }
+}
+
+.glide__arrows{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  button{
+    background: transparent;
+    position: absolute;
+    padding: 0;
+
+    &:hover{
+      padding: 0;
+
+      .st0{
+        fill: $color_red;
+      }
+
+    }
+
+    &.glide__arrow--right{
+      right: 0;
+    }
+
+    &.glide__arrow--left{
+      left: 0;
+    }
+
+    svg{
+      display: inline-block;
+      width: 80px;
+      height: auto;
+      transition: all 150ms ease-in-out;
     }
   }
 }

@@ -20,6 +20,7 @@
 		z-index: 1;
 		background-color: #000;
 		opacity: .6;
+		width: 100%;
 	}
 
 	@media (min-aspect-ratio: 16/9) {
@@ -59,12 +60,25 @@
 			font-size: 26px;
 			color: $color_pink;
 			margin-top: 20px;
+			overflow: hidden;
+
+			.letter {
+				display: inline-block;
+				line-height: 1em;
+			  }
 			// text-transform: uppercase;
 		}
 	}
 }
 
 #intro{
+	h1{
+		font-family: $text-strong;
+		color: $color_white;
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: $padding/2;
+	}
 	p{
 		max-width: $small-width;
 		color: $color_white;
@@ -87,9 +101,9 @@
 			text-decoration: underline;
 		}
 
-		&.final{
+		&.init{
 			font-size: 30px;
-			margin-top: $padding;
+			margin-bottom: $padding;
 			letter-spacing: 1px;
 		}
 	}
@@ -217,6 +231,11 @@
 
 	h1, p{
 		color: $color_white;
+	}
+
+	strong{
+		font-size: 18px;
+    	color: #FFF;
 	}
 
 	h1{
@@ -356,11 +375,25 @@
 	padding: $padding*3 $padding;
 
 	.wrapper{
-		max-width: $small-width;
+		max-width: $small-width - ($small-width/3);
 		margin: 0 auto;
+		text-align: justify;
+  		text-justify: inter-word;
+
+		h1{
+			font-family: $text-strong;
+			color: $color_white;
+			font-size: 26px;
+			margin-bottom: $padding;
+		}
 
 		p{
 			margin-bottom: $padding/1.5;
+		}
+
+		#ass{
+			font-size: 16px;
+			font-weight: 900;
 		}
 	}
 }
@@ -417,6 +450,7 @@
 			text-align: center;
 			font-size: 26px;
 			margin: $padding 0 $padding/2;
+			padding: 0 100px;
 		}
 
 		.person{
