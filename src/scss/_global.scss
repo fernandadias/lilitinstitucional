@@ -197,6 +197,54 @@ footer.bg-purple{
   margin-top: -10px;
   position: relative;
 
+  section.up{
+    border-bottom: 1px solid $color_white;
+
+    ul{
+      margin-top: 10px;
+    }
+  }
+
+  .mail a{
+    text-decoration: underline;
+  }
+
+  section{
+    display: flex;
+
+    div{
+      flex: 1;
+      padding: 0 $padding/4;
+    }
+
+    h1{
+      color: $color_white;
+      font-size: 22px;
+      font-family: $text-strong;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 30px;
+    }
+
+    h2{
+      color: $color_white;
+      font-size: 20px;
+      font-family: $text-strong;
+      letter-spacing: 1px;
+      font-weight: normal;
+      line-height: 24px;
+    }
+
+    a{
+      color: $color_white;
+      //font-weight: 900;
+
+      &:hover{
+        color: $color_red;
+      }
+    }
+  }
+
   .social{
     display: flex;
     margin-top: $padding/4;
@@ -217,7 +265,7 @@ footer.bg-purple{
   }
 
   .form{
-    width: 40%;
+    flex: 2!important;
 
     a{
       color: $color_white;
@@ -229,6 +277,7 @@ footer.bg-purple{
       display:flex;
       flex-direction:row;
       position: relative;
+      max-width: 400px;
     
       /* I've used padding so you can see the edges of the elements. */
       padding:2px;
