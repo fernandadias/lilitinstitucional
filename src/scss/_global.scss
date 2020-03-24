@@ -205,6 +205,26 @@ footer.bg-purple{
     }
   }
 
+  section.bottom{
+    padding: 20px 50px;
+      
+    .logo{
+      max-width: 45px;
+      margin-top: 5px;
+    }
+
+    ul{
+      li{
+        float: left;
+        
+        a{
+          text-decoration: underline;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
   .mail a{
     text-decoration: underline;
   }
@@ -243,17 +263,19 @@ footer.bg-purple{
         color: $color_red;
       }
     }
+
+    
   }
 
   .social{
-    display: flex;
-    margin-top: $padding/4;
+    flex: none;
 
     a{
       padding: 5px;
+      margin-top: 20px;
 
       i {
-        font-size: 18px;
+        font-size: 22px;
         color: $color_white;
         transition: all 200ms ease-in-out;
 
