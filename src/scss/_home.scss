@@ -488,4 +488,23 @@
 	#created-by svg textPath{
 		font-size: 50px;
 	}
+
+	#manifesto .block{
+		display: block;
+
+		div{
+			position: relative;
+		}
+
+		.symbol svg{
+			height: auto;
+			position: relative;
+			top: unset;
+			left: unset;
+			transform: none;
+			/* max-width: 200px; */
+			margin: 0 auto;
+			display: block;
+		}
+	}
 }
