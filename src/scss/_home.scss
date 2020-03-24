@@ -468,3 +468,20 @@
 	}
 	
 }
+
+@media (max-width: 768px) {
+	#reviews{
+		h1{
+			display: block!important;
+			margin-bottom: $padding/4;
+		}
+		
+		.wrapper .quote{
+			padding: 0;
+		}
+	}
+
+	.glide__arrows{
+		top: unset;
+	}
+}
