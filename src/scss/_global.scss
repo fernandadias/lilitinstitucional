@@ -416,7 +416,6 @@ footer.bg-purple{
   }
 }
 
-
 .glide__bullets{
 
   width: $padding*2;
@@ -521,4 +520,27 @@ footer.bg-purple{
       }
     }
 	}
+}
+
+@media (max-width: 768px) {
+  footer.bg-purple section{
+    display: block;
+
+    > div{
+      margin-bottom: $padding/2;
+    }
+
+    &.bottom .logo{
+      margin: $padding/2 auto ;
+    }
+
+    &.bottom{
+      text-align: center;
+
+      ul{
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
 }
